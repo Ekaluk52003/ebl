@@ -6,7 +6,8 @@ var _express = _interopRequireDefault(require("express"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var PORT = process.env.HTTP_PORT || 4001;
+var _process$env$PORT = process.env.PORT,
+    PORT = _process$env$PORT === void 0 ? 3000 : _process$env$PORT;
 var app = (0, _express["default"])();
 app.use(_express["default"]["static"](_path["default"].join(__dirname, 'client', 'build')));
 app.get('/', function (req, res) {
