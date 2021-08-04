@@ -22,6 +22,7 @@ class App extends Component {
       <div className="App">
         <h1>{this.state.flower.name}</h1>
         <p>{this.state.flower.colour}</p>
+        <p>how coudl it work</p>
       </div>
     );
   }
