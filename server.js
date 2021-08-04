@@ -1,8 +1,8 @@
 import path from 'path';
 import express from 'express';
-// const { PORT = 3000 } =  process.env;
+const { PORT = 3000 } =  process.env;
 
-const PORT = process.env || 3000;
+// const PORT = process.env || 3000;
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'client', 'build')));
