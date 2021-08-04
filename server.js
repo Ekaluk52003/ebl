@@ -1,6 +1,9 @@
 import path from 'path';
 import express from 'express';
-const { PORT = 3000 } =  process.env;
+// const { PORT = 3000 } =  process.env;
+
+const PORT = process.env || 3000;
+
 const app = express();
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.get('/', (req, res) => {
@@ -8,7 +11,7 @@ app.get('/', (req, res) => {
 });
 app.get('/flower', (req, res) => {
   res.json({
-    name: 'Dandelion',
+    name: 'Dandelion New api',
     colour: 'Blue-ish'
   });
 });
