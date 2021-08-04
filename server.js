@@ -7,7 +7,7 @@ const PORT = process.env || 3000;
 const app = express();
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.get('/', (req, res) => {
-  res.send('just gonna send it');
+  res.send('just');
 });
 app.get('/flower', (req, res) => {
   res.json({
